@@ -24,6 +24,8 @@
 //   border-color: #f44336;
 // }
 
+// ------------------------------------ ВИКОНАННЯ ----------------------------------------------------------------
+
 const validationInput = document.querySelector("#validation-input");
 
 validationInput.addEventListener("blur", () => {

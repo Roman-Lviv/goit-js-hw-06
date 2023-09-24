@@ -7,6 +7,8 @@
 // <br />
 // <span id="text">Abracadabra!</span>
 
+// ------------------------------------ ВИКОНАННЯ ----------------------------------------------------------------
+
 const fontSizeControl = document.querySelector("#font-size-control");
 const textSpan = document.querySelector("#text");
 
