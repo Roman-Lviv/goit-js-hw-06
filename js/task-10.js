@@ -4,16 +4,13 @@ function getRandomHexColor() {
     .padStart(6, "0")}`;
 }
 
-// Отримуємо посилання на елементи з DOM
 const input = document.querySelector("input");
 const createButton = document.querySelector("[data-create]");
 const destroyButton = document.querySelector("[data-destroy]");
 const boxesContainer = document.querySelector("#boxes");
 
-// Додаємо обробник події click до кнопки "Create"
 createButton.addEventListener("click", createBoxes);
 
-// Додаємо обробник події click до кнопки "Destroy"
 destroyButton.addEventListener("click", destroyBoxes);
 
 function createBoxes() {
