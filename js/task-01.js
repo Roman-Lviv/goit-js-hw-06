@@ -56,7 +56,6 @@
 
 const categoriesList = document.querySelector("#categories");
 
-
 console.log(`Number of categories: ${categoryItems.length}`);
 
 categoryItems.forEach((categoryItem) => {
