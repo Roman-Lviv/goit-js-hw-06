@@ -29,6 +29,19 @@
 
 const validationInput = document.querySelector("#validation-input");
 
+function updateClassBasedOnValidation(isValid) {
+  if (isValid) {
+    applyClasses("valid", "invalid");
+  } else {
+    applyClasses("invalid", "valid");
+  }
+}
+
+function applyClasses(classToAdd, classToRemove) {
+  validationInput.classList.remove(classToRemove);
+  validationInput.classList.add(classToAdd);
+}
+
 validationInput.addEventListener("blur", () => {
   const inputValue = validationInput.value.trim();
   const expectedLength = parseInt(
@@ -36,11 +49,6 @@ validationInput.addEventListener("blur", () => {
     10
   );
 
-  if (inputValue.length === expectedLength) {
-    validationInput.classList.remove("invalid");
-    validationInput.classList.add("valid");
-  } else {
-    validationInput.classList.remove("valid");
-    validationInput.classList.add("invalid");
-  }
+  const isValid = inputValue.length === expectedLength;
+  updateClassBasedOnValidation(isValid);
 });
