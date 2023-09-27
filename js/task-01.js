@@ -55,10 +55,11 @@
 // ------------------------------------ ВИКОНАННЯ ----------------------------------------------------------------
 
 const categoriesList = document.querySelector("#categories");
-// const categoryItems = categoriesList.querySelectorAll("li.item"); без помилка
+const categoryItems = categoriesList.children;
+
 console.log(`Number of categories: ${categoryItems.length}`);
 
-categoryItems.forEach((categoryItem) => {
+Array.from(categoryItems).forEach((categoryItem) => {
   const categoryTitle = categoryItem.querySelector("h2").textContent;
 
   const categoryElements = categoryItem.querySelectorAll("li");
